@@ -1,4 +1,5 @@
 from django.db import models
+from project.user.models import User
 
 class Stadium(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
@@ -10,6 +11,7 @@ class Stadium(models.Model):
     lon = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     created_date = models.DateField(auto_now_add=True)
     update_date = models.DateField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 
 
     def __str__(self) -> str:
