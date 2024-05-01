@@ -20,7 +20,7 @@ class Stadium(models.Model):
 
 class StadiumImage(models.Model):
     image = models.ImageField(upload_to='images/', null=True, blank=True)
-    is_main = models.ImageField(upload_to='images/', null=True, blank=True)
+    is_main = models.BooleanField(default=False, null=True, blank=True)
     stadium = models.ForeignKey(Stadium, on_delete=models.CASCADE)
 
 

@@ -4,8 +4,9 @@ from project.stadiums.models import Stadium
 
 class Booking(models.Model):
     status_choices = (
-        (1,'kutilmoqda'),
-        (2,'bekor qilish')
+        (1, 'active'),
+        (2, 'cancel'),
+        (3, 'book')
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
