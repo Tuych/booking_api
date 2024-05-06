@@ -9,7 +9,7 @@ class Booking(models.Model):
         (3, 'book')
     )
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     stadium = models.ForeignKey(Stadium, on_delete=models.CASCADE)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()

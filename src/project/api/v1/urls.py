@@ -6,5 +6,5 @@ from project.api.v1.booking import urls as booking_urls
 urlpatterns = [
     path('user/', include(user_urls)),
     path('stadium/', include(stadium_urls)),
-    # path('booking/', include(booking_urls)),
+    path('booking/', include(booking_urls)),
 ]
